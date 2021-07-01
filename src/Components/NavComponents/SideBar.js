@@ -11,11 +11,15 @@ const SideBar = ({ isOpen, handleClick }) => {
       </Icon>
       <SideItemWrapper>
         <SideBarMenu>
-          <SideBarLink to="projects">Projects</SideBarLink>
-
-          <SideBarLink to="about">About</SideBarLink>
-
-          <SideBarLink to="contacts">Contact</SideBarLink>
+          <SideBarLink to="projects" onClick={handleClick}>
+            Projects
+          </SideBarLink>
+          <SideBarLink to="about" onClick={handleClick}>
+            About
+          </SideBarLink>
+          <SideBarLink to="contacts" onClick={handleClick}>
+            Contact
+          </SideBarLink>
         </SideBarMenu>
       </SideItemWrapper>
     </SideBarContainer>
