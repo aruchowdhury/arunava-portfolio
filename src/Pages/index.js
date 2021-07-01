@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import HeroSection from "../Components/HeroSection";
 import NavBar from "../Components/NavComponents/NavBar";
 import SideBar from "../Components/NavComponents/SideBar";
 
@@ -13,6 +14,7 @@ const Home = () => {
     <>
       <SideBar isOpen={isOpen} handleClick={handleClick} />
       <NavBar handleClick={handleClick} />
+      <HeroSection />
     </>
   );
 };
