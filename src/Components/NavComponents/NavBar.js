@@ -49,8 +49,7 @@ const NavBar = ({ handleClick }) => {
 export default NavBar;
 
 const Nav = styled.nav`
-  background: #351e76;
-  opacity: 0.5;
+  background: rgba(53, 30, 118, 0.5);
   height: 80px;
   margin-top: -90px;
   display: flex;
@@ -85,7 +84,7 @@ const Logo = styled(LinkS)`
   text-decoration: none;
   transition: all ease-in-out 0.3s;
   &:hover {
-    opacity: 0.5;
+    opacity: 0.4;
   }
 `;
 
@@ -132,7 +131,7 @@ const NavLink = styled(LinkS)`
   cursor: pointer;
   transition: all ease-in-out 0.3s;
   &:hover {
-    opacity: 0.5;
+    opacity: 0.4;
   }
 `;
 
@@ -141,7 +140,7 @@ const IconLink = styled.a`
   color: #fff;
   transition: all ease-in-out 0.3s;
   &:hover {
-    color: purple;
+    opacity: 0.4;
   }
 `;
 

@@ -46,6 +46,21 @@ const HeroContainer = styled.div`
   height: 800px;
   position: relative;
   z-index: 1;
+  :before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.1) 100%
+      ),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
+    z-index: 2;
+  }
 `;
 
 const HeroBg = styled.div`
@@ -99,7 +114,7 @@ const HeroH1 = styled.h1`
 const HeroP = styled.p`
   color: #fff;
   margin-top: 24px;
-  font-size: 24px;
+  font-size: 35px;
   text-align: center;
   max-width: 600px;
   @media screen and(max-width: 768px) {
@@ -130,7 +145,7 @@ const Button = styled(LinkS)`
   color: #fff;
   border-radius: 50px;
   background: #656097;
-  opacity: 0.8;
+
   white-space: nowrap;
   font-size: 20px;
   padding: 14px;
@@ -140,9 +155,8 @@ const Button = styled(LinkS)`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.5s ease-in-out;
   &:hover {
-    transition: all 0.2s ease-in-out;
     opacity: 0.8;
     background: purple;
   }
