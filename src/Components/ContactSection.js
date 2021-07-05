@@ -28,27 +28,25 @@ const ContactSection = () => {
     <ContactWrapper id="contact">
       <Heading>Contact Me</Heading>
       <Form onSubmit={sendEmail}>
-        <InputsDiv>
-          <InputDiv>
-            <Label name="name">Name</Label>
-            <Input type="text" name="name" required></Input>
-          </InputDiv>
-          <InputDiv>
-            <Label email="email">Email</Label>
-            <Input type="email" name="email" required></Input>
-          </InputDiv>
-          <InputDiv>
-            <Label subject="subject">Subject</Label>
-            <Input type="text" name="subject" required></Input>
-          </InputDiv>
-          <InputDiv>
-            <Label message="message">Message</Label>
-            <Textarea type="text" name="message" required></Textarea>
-          </InputDiv>
-          <ButtonDiv>
-            <Button type="submit" value="Send Message"></Button>
-          </ButtonDiv>
-        </InputsDiv>
+        <InputDiv>
+          <Label name="name">Name</Label>
+          <Input type="text" name="name" required></Input>
+        </InputDiv>
+        <InputDiv>
+          <Label email="email">Email</Label>
+          <Input type="email" name="email" required></Input>
+        </InputDiv>
+        <InputDiv>
+          <Label subject="subject">Subject</Label>
+          <Input type="text" name="subject" required></Input>
+        </InputDiv>
+        <InputDiv>
+          <Label message="message">Message</Label>
+          <Textarea type="text" name="message" required></Textarea>
+        </InputDiv>
+        <ButtonDiv>
+          <Button type="submit" value="Send Message"></Button>
+        </ButtonDiv>
       </Form>
     </ContactWrapper>
   );
@@ -59,7 +57,7 @@ export default ContactSection;
 const ContactWrapper = styled.div`
   width: 100%;
   min-height: 90vh;
-  background: #3e2f84;
+  background: #1c1755;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,7 +69,7 @@ const Heading = styled.h1`
   font-weight: 500;
   color: #fff;
   margin-bottom: 50px;
-  margin-top: 73px;
+  margin-top: 80px;
 `;
 
 const ButtonDiv = styled.div`
@@ -85,13 +83,15 @@ const ButtonDiv = styled.div`
 const Button = styled.input`
   width: 200px;
   height: 50px;
-  background: #8e7ed0;
+  background: #656097;
   border-radius: 10px;
   color: #f2f1ef;
   border: none;
   font-size: 1.2rem;
+  transition: all ease-in-out 0.3s;
   &:hover {
     background: purple;
+    opacity: 0.7;
     cursor: pointer;
   }
 `;
@@ -99,10 +99,10 @@ const Button = styled.input`
 const Textarea = styled.textarea`
   width: 500px;
   height: 100px;
-  background: #8e7ed0;
+  background: #656097;
   border-radius: 10px;
   padding: 10px;
-  color: black;
+  color: #fff;
   border: none;
   outline: none;
   font-size: 1rem;
@@ -126,7 +126,7 @@ const Label = styled.label`
 const Input = styled.input`
   width: 500px;
   height: 25px;
-  background: #8e7ed0;
+  background: #656097;
   border-radius: 10px;
   padding: 10px;
   color: #fff;
@@ -137,8 +137,6 @@ const Input = styled.input`
     width: 80vw;
   }
 `;
-
-const InputsDiv = styled.div``;
 
 const Form = styled.form`
   max-width: 100%;

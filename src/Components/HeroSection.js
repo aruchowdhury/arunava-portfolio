@@ -22,6 +22,8 @@ const HeroSection = () => {
         <HeroBtnWrap>
           <Button
             to="projects"
+            smooth={true}
+            duration={1000}
             onMouseEnter={handleHover}
             onMouseLeave={handleHover}
           >
@@ -44,20 +46,6 @@ const HeroContainer = styled.div`
   height: 800px;
   position: relative;
   z-index: 1;
-  /* :before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.6) 100%
-      ),
-      linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
-    z-index: 2;
-  } */
 `;
 
 const HeroBg = styled.div`
@@ -141,7 +129,7 @@ const ArrowDownActive = styled(IoMdArrowDown)`
 const Button = styled(LinkS)`
   color: #fff;
   border-radius: 50px;
-  background: #351e76;
+  background: #656097;
   opacity: 0.8;
   white-space: nowrap;
   font-size: 20px;
@@ -155,6 +143,7 @@ const Button = styled(LinkS)`
   transition: all 0.2s ease-in-out;
   &:hover {
     transition: all 0.2s ease-in-out;
-    opacity: 1;
+    opacity: 0.8;
+    background: purple;
   }
 `;

@@ -13,6 +13,7 @@ const AboutSection = () => {
         <Img src="/images/logo6.png" />
         <Img src="/images/logo7.png" />
       </LogoDiv>
+
       <AboutContainer>
         <ImageConatainer>
           <ProfileImg></ProfileImg>
@@ -44,7 +45,11 @@ const Wrapper = styled.div`
   gap: 0px 0px;
   width: 100%;
   min-height: 100vh;
-  background: #3e2f84;
+  background: #1c1755;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
 `;
 
 const AboutContainer = styled.div`
@@ -54,8 +59,9 @@ const AboutContainer = styled.div`
   margin-bottom: 120px;
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    padding: 50px 0 0 0;
+    padding: 70px 0 0 0;
     align-items: center;
+    margin-top: --100px;
   }
 `;
 const LogoDiv = styled.div`
@@ -70,6 +76,9 @@ const Name = styled.h1`
   color: #fff;
   font-size: 2.2rem;
   font-weight: 500;
+  @media screen and (max-width: 768px) {
+    font-size: 1.8rem;
+  }
 `;
 
 const Para = styled.p`
@@ -91,7 +100,7 @@ const TextContent = styled.div`
 const ImageConatainer = styled.div`
   width: 400px;
   @media screen and (max-width: 768px) {
-    width: 82vw;
+    width: 80vw;
   }
 `;
 const ProfileImg = styled.div`
@@ -115,6 +124,8 @@ const Img = styled.img`
   margin: 150px 30px 30px 0;
   transition: all 0.3s ease-in-out;
   @media screen and (max-width: 768px) {
-    margin: 150px 30px 30px 0;
+    margin: 150px 5px 0 8px;
+    width: 35px;
+    height: 35px;
   }
 `;

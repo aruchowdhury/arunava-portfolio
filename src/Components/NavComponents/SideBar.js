@@ -18,7 +18,7 @@ const SideBar = ({ isOpen, handleClick }) => {
           <SideBarLink to="about" onClick={handleClick}>
             About
           </SideBarLink>
-          <SideBarLink to="contacts" onClick={handleClick}>
+          <SideBarLink to="contact" onClick={handleClick}>
             Contact
           </SideBarLink>
           <IconLink href="">

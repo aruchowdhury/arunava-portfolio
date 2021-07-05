@@ -5,14 +5,14 @@ import { FaLinkedin, FaGithubSquare, FaTwitterSquare } from "react-icons/fa";
 const FooterSection = () => {
   return (
     <IconWrapper>
-      <IconLink href="">
-        <FaLinkedin size={50} />
+      <IconLink href="https://www.linkedin.com/in/arunavachowdhury/">
+        <FaLinkedin size={45} />
       </IconLink>
-      <IconLink href="">
-        <FaGithubSquare size={50} />
+      <IconLink href="https://github.com/aruchowdhury">
+        <FaGithubSquare size={45} />
       </IconLink>
-      <IconLink href="">
-        <FaTwitterSquare size={50} />
+      <IconLink href="https://twitter.com/aru_pavel">
+        <FaTwitterSquare size={45} />
       </IconLink>
     </IconWrapper>
   );
@@ -32,7 +32,7 @@ const IconLink = styled.a`
 const IconWrapper = styled.div`
   width: 100%;
   background: #351e76;
-  opacity: 0.9;
+
   height: 70px;
   display: flex;
   justify-content: center;

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Link as LinkR } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { Link as LinkS } from "react-scroll";
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
@@ -9,17 +8,25 @@ const NavBar = ({ handleClick }) => {
   return (
     <Nav>
       <NavItemWrapper>
-        <Logo to="hero">devARU</Logo>
+        <Logo to="hero" smooth={true} duration={1100}>
+          <Span>{"{"}</Span>devARU<Span>{"}"}</Span>
+        </Logo>
 
         <NavMenu>
           <NavItem>
-            <NavLink to="projects">Projects</NavLink>
+            <NavLink to="projects" smooth={true} duration={1000}>
+              Projects
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="about">About</NavLink>
+            <NavLink to="about" smooth={true} duration={800}>
+              About
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="contact">Contact</NavLink>
+            <NavLink to="contact" smooth={true} duration={1200}>
+              Contact
+            </NavLink>
           </NavItem>
         </NavMenu>
 
@@ -27,10 +34,10 @@ const NavBar = ({ handleClick }) => {
           <FaBars />
         </Hamburgaer>
         <NavMenu>
-          <IconLink href="">
+          <IconLink href="https://www.linkedin.com/in/arunavachowdhury/">
             <FaLinkedin size={30} />
           </IconLink>
-          <IconLink href="">
+          <IconLink href="https://github.com/aruchowdhury">
             <FaGithubSquare size={30} />
           </IconLink>
         </NavMenu>
@@ -43,7 +50,7 @@ export default NavBar;
 
 const Nav = styled.nav`
   background: #351e76;
-  opacity: 0.7;
+  opacity: 0.5;
   height: 80px;
   margin-top: -90px;
   display: flex;
@@ -76,6 +83,10 @@ const Logo = styled(LinkS)`
   margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
+  transition: all ease-in-out 0.3s;
+  &:hover {
+    opacity: 0.5;
+  }
 `;
 
 const Hamburgaer = styled.div`
@@ -104,6 +115,12 @@ const NavMenu = styled.ul`
 
 const NavItem = styled.li`
   height: 80px;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+  &:hover {
+    color: purple;
+  }
 `;
 const NavLink = styled(LinkS)`
   color: #fff;
@@ -113,8 +130,9 @@ const NavLink = styled(LinkS)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
-  &:active {
-    border-bottom: 3px solid #01bf71;
+  transition: all ease-in-out 0.3s;
+  &:hover {
+    opacity: 0.5;
   }
 `;
 
@@ -125,4 +143,8 @@ const IconLink = styled.a`
   &:hover {
     color: purple;
   }
+`;
+
+const Span = styled.span`
+  font-weight: 50;
 `;
