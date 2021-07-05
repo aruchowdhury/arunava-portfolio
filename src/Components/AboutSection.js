@@ -104,8 +104,8 @@ const ImageConatainer = styled.div`
   }
 `;
 const ProfileImg = styled.div`
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
   border: 2px solid #fff;
   background: url("/images/img1.png") center no-repeat;
