@@ -108,12 +108,12 @@ const ProfileImg = styled.div`
   height: 300px;
   border-radius: 50%;
   border: 2px solid #fff;
-  background: url("/images/img1.jpg") center no-repeat;
+  background: url("/images/img1.png") center no-repeat;
   background-size: 300px;
   transition: all 0.3s ease-in-out;
   @media screen and (max-width: 768px) {
-    width: 80vw;
-    height: 80vw;
+    width: 280px;
+    height: 280px;
   }
 `;
 
