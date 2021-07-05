@@ -112,8 +112,8 @@ const ProfileImg = styled.div`
   background-size: 300px;
   transition: all 0.3s ease-in-out;
   @media screen and (max-width: 768px) {
-    width: 280px;
-    height: 280px;
+    width: 80vw;
+    height: 80vw;
   }
 `;
 
