@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AboutSection from "./AboutSection";
 import ContactSection from "./ContactSection";
+import FooterSection from "./FooterSection";
 import HeroSection from "./HeroSection";
 import NavBar from "./NavComponents/NavBar";
 import SideBar from "./NavComponents/SideBar";
@@ -21,6 +22,7 @@ const HomePage = () => {
       <AboutSection />
       <ProjectsSection />
       <ContactSection />
+      <FooterSection />
     </>
   );
 };

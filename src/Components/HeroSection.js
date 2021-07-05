@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Video from "../Videos/Video.mp4";
 import { IoIosArrowDown, IoMdArrowDown } from "react-icons/io";
 import { Link as LinkS } from "react-scroll";
@@ -67,7 +67,7 @@ const HeroBg = styled.div`
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%auto;
+  height: 100%;
   overflow: hidden;
 `;
 
@@ -78,8 +78,17 @@ const VideoBg = styled.video`
   object-fit: cover;
   background: #232a34;
 `;
+const Animation = keyframes`
+  0% { top: -3.125rem; }
+  100% { top: 20rem;}
+`;
 
 const HeroContent = styled.div`
+  position: relative;
+  top: 0;
+  animation: ${Animation};
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
   z-index: 2;
   max-width: 1200px;
   position: absolute;
@@ -132,7 +141,8 @@ const ArrowDownActive = styled(IoMdArrowDown)`
 const Button = styled(LinkS)`
   color: #fff;
   border-radius: 50px;
-  background: darkblue;
+  background: #351e76;
+  opacity: 0.8;
   white-space: nowrap;
   font-size: 20px;
   padding: 14px;
@@ -145,6 +155,6 @@ const Button = styled(LinkS)`
   transition: all 0.2s ease-in-out;
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: purple;
+    opacity: 1;
   }
 `;

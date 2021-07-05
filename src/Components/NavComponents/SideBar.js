@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
 import { Link as LinkS } from "react-scroll";
+import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 
 const SideBar = ({ isOpen, handleClick }) => {
   return (
@@ -20,6 +21,12 @@ const SideBar = ({ isOpen, handleClick }) => {
           <SideBarLink to="contacts" onClick={handleClick}>
             Contact
           </SideBarLink>
+          <IconLink href="">
+            <FaLinkedin size={30} />
+          </IconLink>
+          <IconLink href="">
+            <FaGithubSquare size={30} />
+          </IconLink>
         </SideBarMenu>
       </SideItemWrapper>
     </SideBarContainer>
@@ -33,7 +40,7 @@ const SideBarContainer = styled.aside`
   z-index: 99;
   width: 100%;
   height: 100%;
-  background: #0d0d0d;
+  background: #351e76;
   display: grid;
   align-items: center;
   top: 0;
@@ -84,4 +91,8 @@ const SideBarLink = styled(LinkS)`
     color: #01bf71;
     transition: 0.2s ease-in-out;
   }
+`;
+const IconLink = styled.a`
+  padding: 10px;
+  color: #fff;
 `;

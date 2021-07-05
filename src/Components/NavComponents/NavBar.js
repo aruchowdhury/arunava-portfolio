@@ -3,15 +3,14 @@ import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { Link as LinkS } from "react-scroll";
+import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 
 const NavBar = ({ handleClick }) => {
   return (
     <Nav>
       <NavItemWrapper>
-        <Logo to="/">devARU</Logo>
-        <Hamburgaer onClick={handleClick}>
-          <FaBars />
-        </Hamburgaer>
+        <Logo to="hero">devARU</Logo>
+
         <NavMenu>
           <NavItem>
             <NavLink to="projects">Projects</NavLink>
@@ -20,8 +19,20 @@ const NavBar = ({ handleClick }) => {
             <NavLink to="about">About</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="contacts">Contact</NavLink>
+            <NavLink to="contact">Contact</NavLink>
           </NavItem>
+        </NavMenu>
+
+        <Hamburgaer onClick={handleClick}>
+          <FaBars />
+        </Hamburgaer>
+        <NavMenu>
+          <IconLink href="">
+            <FaLinkedin size={30} />
+          </IconLink>
+          <IconLink href="">
+            <FaGithubSquare size={30} />
+          </IconLink>
         </NavMenu>
       </NavItemWrapper>
     </Nav>
@@ -31,7 +42,8 @@ const NavBar = ({ handleClick }) => {
 export default NavBar;
 
 const Nav = styled.nav`
-  background: #000;
+  background: #351e76;
+  opacity: 0.7;
   height: 80px;
   margin-top: -90px;
   display: flex;
@@ -41,7 +53,6 @@ const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
-
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
   }
@@ -55,7 +66,7 @@ const NavItemWrapper = styled.div`
   padding: 0 24px;
   max-width: 1100px;
 `;
-const Logo = styled(LinkR)`
+const Logo = styled(LinkS)`
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
@@ -70,7 +81,6 @@ const Logo = styled(LinkR)`
 const Hamburgaer = styled.div`
   display: none;
   color: #fff;
-
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
@@ -105,5 +115,14 @@ const NavLink = styled(LinkS)`
   cursor: pointer;
   &:active {
     border-bottom: 3px solid #01bf71;
+  }
+`;
+
+const IconLink = styled.a`
+  padding: 0 5px;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+  &:hover {
+    color: purple;
   }
 `;
