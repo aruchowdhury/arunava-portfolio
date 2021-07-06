@@ -9,7 +9,7 @@ const NavBar = ({ handleClick }) => {
     <Nav>
       <NavItemWrapper>
         <Logo to="hero" smooth={true} duration={1100}>
-          <Span>{"{"}</Span>devARU<Span>{"}"}</Span>
+          <Span>{"{"}</Span>ARU<Span>{"}"}</Span>
         </Logo>
 
         <NavMenu>
