@@ -25,10 +25,7 @@ const ContactSection = () => {
   };
   return (
     <Wrap>
-      <Heading>
-        Please fill the form out, <br />I will get back to you as soon as
-        possible.
-      </Heading>
+      <Heading>Contact Me</Heading>
       <RegistrationForm>
         <InputDivWrapper>
           <label name="name"> Full Name:</label>
