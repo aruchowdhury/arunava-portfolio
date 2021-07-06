@@ -1,10 +1,19 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { projects } from "./Constants";
 
 const ProjectsSection = () => (
   <ProjectWrapper>
-    <Heading>Projects</Heading>
+    <LogoDiv>
+      <Img src="/images/logo1.png" />
+      <Img src="/images/logo2.png" />
+      <Img src="/images/logo4.png" />
+      <Img src="/images/logo3.png" />
+      <Img src="/images/logo5.png" />
+      <Img src="/images/logo6.png" />
+      <Img src="/images/logo7.png" />
+    </LogoDiv>
+
     <MenuGrid>
       {projects.map((project) => {
         return (
@@ -41,7 +50,7 @@ const ProjectWrapper = styled.div`
 
 const MenuGrid = styled.div`
   display: grid;
-  grid-template-columns: 28rem 28rem;
+  grid-template-columns: 60rem;
   justify-content: center;
   align-items: center;
   grid-gap: 2rem;
@@ -50,20 +59,27 @@ const MenuGrid = styled.div`
     grid-template-columns: 20rem;
   }
 `;
+const Animation = keyframes`
+  0% { top: -4rem; }
+  100% { top: 1.5rem;}
+`;
 
 const ItemWrapper = styled.div`
+  position: relative;
+  top: 0;
+  animation: ${Animation};
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
   width: 100%;
   height: 100%;
   border: none;
   border-radius: 0.5rem;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   align-items: left;
   align-content: left;
-  background: #1c1755;
-
+  background: #1f4894;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
     0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
     0 12px 12px rgba(0, 0, 0, 0.12);
@@ -73,6 +89,14 @@ const ItemWrapper = styled.div`
       0 4px 4px rgba(0, 0, 0, 0.25), 0 8px 8px rgba(0, 0, 0, 0.25),
       0 12px 12px rgba(0, 0, 0, 0.25);
     transform: translateY(-0.5rem);
+  }
+
+  @media (max-width: 675px) {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: left;
+    align-content: left;
   }
 `;
 
@@ -88,10 +112,11 @@ const InfoWrap = styled.div`
 `;
 
 const ItemImg = styled.img`
-  border-radius: 0.5rem 0.5rem 0 0;
-  width: 100%;
-  height: 16rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+  width: 30rem;
+  height: 17.5rem;
   @media (max-width: 600px) {
+    width: 100%;
     height: 12.5rem;
   }
 `;
@@ -141,19 +166,32 @@ const LinkWrap = styled.div`
 `;
 const ExternalLinks = styled.a`
   text-decoration: none;
-  color: #fff;
+  color: #1f4894;
   font-size: 0.9rem;
   padding: 0.6rem 1rem;
-  background: #656097;
+  background: #fff;
   border-radius: 10px;
   transition: 0.5s;
   &:hover {
-    background: purple;
+    opacity: 0.4;
   }
 `;
-const Heading = styled.h1`
-  font-size: 3rem;
-  font-weight: 500;
-  color: #fff;
-  margin-bottom: 50px;
+
+const Img = styled.img`
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  margin: 50px 40px 50px 0;
+  transition: all 0.3s ease-in-out;
+  @media screen and (max-width: 768px) {
+    margin: 40px 5px 40px 8px;
+    width: 35px;
+    height: 35px;
+  }
+`;
+const LogoDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 `;

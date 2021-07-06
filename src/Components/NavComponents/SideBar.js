@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
-import { Link as LinkS } from "react-scroll";
+import { Link } from "react-router-dom";
 
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 
@@ -13,9 +13,9 @@ const SideBar = ({ isOpen, handleClick }) => {
       </Icon>
       <SideItemWrapper>
         <SideBarMenu>
-          <SideBarLinkR to="/projects" onClick={handleClick}>
+          <SideBarLink to="/projects" onClick={handleClick}>
             Projects
-          </SideBarLinkR>
+          </SideBarLink>
           <SideBarLink to="/contact" onClick={handleClick}>
             Contact
           </SideBarLink>
@@ -74,7 +74,7 @@ const SideBarMenu = styled.ul`
     grid-template-rows: repeat(6, 60px);
   }
 `;
-const SideBarLink = styled(LinkS)`
+const SideBarLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,20 +93,4 @@ const SideBarLink = styled(LinkS)`
 const IconLink = styled.a`
   padding: 10px;
   color: #1f4894;
-`;
-const SideBarLinkR = styled(LinkS)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  text-decoration: none;
-  list-style: none;
-  transition: 0.2s ease-in-out;
-  text-decoration: none;
-  color: #1f4894;
-  cursor: pointer;
-  &:hover {
-    color: #01bf71;
-    transition: 0.2s ease-in-out;
-  }
 `;
