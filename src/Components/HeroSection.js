@@ -80,14 +80,14 @@ const HeroContent = styled.div`
   background: rgba(0, 212, 198, 0.4);
   border-radius: 20px;
   z-index: 2;
-  max-width: 1200px;
   position: absolute;
-  padding: 8px 24px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   @media screen and (max-width: 768px) {
     margin-top: -135px;
+    background: none;
   }
 `;
 
@@ -132,7 +132,7 @@ const Heading1 = styled.h1`
   font-size: 2.2rem;
   font-weight: 500;
   @media screen and (max-width: 768px) {
-    font-size: 1.4rem;
+    font-size: 1.29rem;
   }
 `;
 const Heading2 = styled.h1`
@@ -141,7 +141,7 @@ const Heading2 = styled.h1`
   font-weight: 500;
   line-height: 3.5rem;
   @media screen and (max-width: 768px) {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 `;
 
@@ -157,7 +157,7 @@ const Description = styled.div`
   @media screen and (max-width: 768px) {
     margin-left: 0;
     margin-top: 30px;
-    width: 90vw;
+    width: 80vw;
   }
 `;
 
@@ -173,5 +173,7 @@ const ProfileImg = styled.div`
     0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
     0 12px 12px rgba(0, 0, 0, 0.12);
   @media screen and (max-width: 768px) {
+    width: 250px;
+    height: 250px;
   }
 `;
