@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { projects } from "./Constants";
 
 const ProjectsSection = () => (
-  <ProjectWrapper id="projects">
+  <ProjectWrapper>
     <Heading>Projects</Heading>
     <MenuGrid>
       {projects.map((project) => {
@@ -31,7 +31,7 @@ export default ProjectsSection;
 const ProjectWrapper = styled.div`
   width: 100%;
   min-height: 100%;
-  background: #3e2f84;
+  background: #fff;
   padding: 80px 0;
   display: flex;
   flex-direction: column;

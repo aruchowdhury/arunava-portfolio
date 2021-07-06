@@ -1,12 +1,32 @@
 import "./App.css";
-import { BrowserRouter as Router } from "react-router-dom";
-import HomePage from "./Components/HomePage";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ProjectsSection from "./Components/ProjectsSection";
+import React, { useState } from "react";
+import HeroSection from "./Components/HeroSection";
+import NavBar from "./Components/NavComponents/NavBar";
+import SideBar from "./Components/NavComponents/SideBar";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <Router>
-      <HomePage />
-    </Router>
+    <>
+      <Router>
+        <SideBar isOpen={isOpen} handleClick={handleClick} />
+        <NavBar handleClick={handleClick} />
+        <Switch>
+          <Route exact path="/">
+            <HeroSection />
+          </Route>
+          <Route exact path="/projects">
+            <ProjectsSection />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 

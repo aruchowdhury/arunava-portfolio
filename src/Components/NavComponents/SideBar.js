@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
 import { Link as LinkS } from "react-scroll";
+import { Link as LinkR } from "react-router-dom";
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 
 const SideBar = ({ isOpen, handleClick }) => {
@@ -12,13 +13,10 @@ const SideBar = ({ isOpen, handleClick }) => {
       </Icon>
       <SideItemWrapper>
         <SideBarMenu>
-          <SideBarLink to="projects" onClick={handleClick}>
+          <SideBarLinkR to="/projects" onClick={handleClick}>
             Projects
-          </SideBarLink>
-          <SideBarLink to="about" onClick={handleClick}>
-            About
-          </SideBarLink>
-          <SideBarLink to="contact" onClick={handleClick}>
+          </SideBarLinkR>
+          <SideBarLink to="/contact" onClick={handleClick}>
             Contact
           </SideBarLink>
           <IconLink href="">
@@ -40,7 +38,7 @@ const SideBarContainer = styled.aside`
   z-index: 99;
   width: 100%;
   height: 100%;
-  background: #351e76;
+  background: rgba(0, 212, 198, 1);
   display: grid;
   align-items: center;
   top: 0;
@@ -51,7 +49,7 @@ const SideBarContainer = styled.aside`
 `;
 
 const CloseIcon = styled(FaTimes)`
-  color: #fff;
+  color: #1f4894; ;
 `;
 const Icon = styled.div`
   position: absolute;
@@ -85,7 +83,7 @@ const SideBarLink = styled(LinkS)`
   list-style: none;
   transition: 0.2s ease-in-out;
   text-decoration: none;
-  color: #fff;
+  color: #1f4894;
   cursor: pointer;
   &:hover {
     color: #01bf71;
@@ -94,5 +92,21 @@ const SideBarLink = styled(LinkS)`
 `;
 const IconLink = styled.a`
   padding: 10px;
-  color: #fff;
+  color: #1f4894;
+`;
+const SideBarLinkR = styled(LinkS)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  list-style: none;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+  color: #1f4894;
+  cursor: pointer;
+  &:hover {
+    color: #01bf71;
+    transition: 0.2s ease-in-out;
+  }
 `;

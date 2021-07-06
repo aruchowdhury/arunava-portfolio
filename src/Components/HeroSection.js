@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
-import Video from "../Videos/Video.mp4";
 import { IoIosArrowDown, IoMdArrowDown } from "react-icons/io";
-import { Link as LinkS } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
@@ -12,18 +11,25 @@ const HeroSection = () => {
   };
 
   return (
-    <HeroContainer id="hero">
-      <HeroBg>
-        <VideoBg autoPlay loop muted src={Video} type="Video/mp4"></VideoBg>
-      </HeroBg>
+    <HeroContainer>
       <HeroContent>
-        <HeroH1>Hello, I am Aru.</HeroH1>
-        <HeroP>A full-stack web developer.</HeroP>
+        <AboutContainer>
+          <ProfileImg />
+          <Description>
+            <Heading1>Hi, I am Arunava Chowdhury</Heading1>
+            <Heading2>A Full-stack Developer</Heading2>
+            <Text>
+              I love responsive web applications and am experienced in creating
+              modern front-end using React and JavaScript and robust backend
+              using Node.js, Express.js, and MongoDB. I am currently learning
+              more about React and UI/UX design to bridge the gap between
+              complex code and dynamic user experience.
+            </Text>
+          </Description>
+        </AboutContainer>
         <HeroBtnWrap>
           <Button
-            to="projects"
-            smooth={true}
-            duration={1000}
+            to="/projects"
             onMouseEnter={handleHover}
             onMouseLeave={handleHover}
           >
@@ -37,53 +43,32 @@ const HeroSection = () => {
 
 export default HeroSection;
 
+const AboutContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+`;
+
 const HeroContainer = styled.div`
-  background: #0c0c0c;
+  background: white;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 30px;
-  height: 800px;
+  height: 100vh;
   position: relative;
   z-index: 1;
-  :before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(0, 0, 0, 0.1) 100%
-      ),
-      linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
-    z-index: 2;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 50px;
   }
 `;
 
-const HeroBg = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-`;
-
-const VideoBg = styled.video`
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  background: #232a34;
-`;
 const Animation = keyframes`
   0% { top: -3.125rem; }
-  100% { top: 20rem;}
+  100% { top: 15rem;}
 `;
 
 const HeroContent = styled.div`
@@ -92,36 +77,17 @@ const HeroContent = styled.div`
   animation: ${Animation};
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
+  background: rgba(0, 212, 198, 0.4);
+  border-radius: 20px;
   z-index: 2;
   max-width: 1200px;
   position: absolute;
   padding: 8px 24px;
   display: flex;
   flex-direction: column;
-  align-items: ceenter;
-`;
-const HeroH1 = styled.h1`
-  color: #fff;
-  font-size: 48px;
-  text-align: center;
-  @media screen and(max-width: 768px) {
-    font-size: 40px;
-  }
-  @media screen and(max-width: 480px) {
-    font-size: 32px;
-  }
-`;
-const HeroP = styled.p`
-  color: #fff;
-  margin-top: 24px;
-  font-size: 35px;
-  text-align: center;
-  max-width: 600px;
-  @media screen and(max-width: 768px) {
-    font-size: 24px;
-  }
-  @media screen and(max-width: 480px) {
-    font-size: 18px;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    margin-top: -135px;
   }
 `;
 
@@ -141,11 +107,10 @@ const ArrowDownActive = styled(IoMdArrowDown)`
   font-size: 20px;
 `;
 
-const Button = styled(LinkS)`
-  color: #fff;
+const Button = styled(Link)`
+  color: rgba(0, 212, 198, 1);
   border-radius: 50px;
-  background: #656097;
-
+  background: #1f4894;
   white-space: nowrap;
   font-size: 20px;
   padding: 14px;
@@ -155,9 +120,58 @@ const Button = styled(LinkS)`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
   transition: all 0.5s ease-in-out;
   &:hover {
-    opacity: 0.8;
-    background: purple;
+    background: #2b64cf;
+  }
+`;
+
+const Heading1 = styled.h1`
+  color: #1f4894;
+  font-size: 2.2rem;
+  font-weight: 500;
+  @media screen and (max-width: 768px) {
+    font-size: 1.4rem;
+  }
+`;
+const Heading2 = styled.h1`
+  color: #1f4894;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 3.5rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+`;
+
+const Text = styled.p`
+  color: #1f4894;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 30px;
+`;
+const Description = styled.div`
+  width: 600px;
+  margin-left: 20px;
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 30px;
+    width: 90vw;
+  }
+`;
+
+const ProfileImg = styled.div`
+  width: 280px;
+  height: 280px;
+  border-radius: 20px;
+  border: none;
+  margin: 10px;
+  background: url("/images/img1.png") center no-repeat;
+  background-size: 300px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 12px 12px rgba(0, 0, 0, 0.12);
+  @media screen and (max-width: 768px) {
   }
 `;
