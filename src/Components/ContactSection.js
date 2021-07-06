@@ -29,19 +29,19 @@ const ContactSection = () => {
       <Heading>Contact Me</Heading>
       <StyledForm>
         <InputDiv>
-          <Label name="name">Name:</Label>
+          <Label name="name">Name</Label>
           <Input type="text" name="name" required="true"></Input>
         </InputDiv>
         <InputDiv>
-          <Label email="email">Email:</Label>
+          <Label email="email">Email</Label>
           <Input type="email" name="email" required="true"></Input>
         </InputDiv>
         <InputDiv>
-          <Label subject="subject">Subject:</Label>
+          <Label subject="subject">Subject</Label>
           <Input type="text" name="subject" required="true"></Input>
         </InputDiv>
         <InputDiv>
-          <Label message="message">Your Message:</Label>
+          <Label message="message">Message</Label>
           <StyledTextArea
             type="text"
             name="message"
@@ -49,7 +49,7 @@ const ContactSection = () => {
           ></StyledTextArea>
         </InputDiv>
         <ButtonDiv>
-          <StyledButton onClick={sendEmail}>Send Message</StyledButton>
+          <StyledButton onClick={sendEmail}>Send </StyledButton>
         </ButtonDiv>
       </StyledForm>
     </ContactWrapper>
