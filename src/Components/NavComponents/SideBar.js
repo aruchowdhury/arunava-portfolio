@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
 import { Link as LinkS } from "react-scroll";
-import { Link as LinkR } from "react-router-dom";
+
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 
 const SideBar = ({ isOpen, handleClick }) => {
