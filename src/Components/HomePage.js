@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import AboutSection from "./AboutSection";
-import ContactSection from "./ContactSection";
+
 import FooterSection from "./FooterSection";
 import HeroSection from "./HeroSection";
 import NavBar from "./NavComponents/NavBar";
@@ -19,9 +18,9 @@ const HomePage = () => {
       <SideBar isOpen={isOpen} handleClick={handleClick} />
       <NavBar handleClick={handleClick} />
       <HeroSection />
-      <AboutSection />
+
       <ProjectsSection />
-      <ContactSection />
+
       <FooterSection />
     </>
   );

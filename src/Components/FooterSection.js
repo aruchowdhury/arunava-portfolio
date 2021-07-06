@@ -38,6 +38,6 @@ const IconWrapper = styled.div`
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 960px) {
-    transition: 0.8s all ease;
+    transition: 0.5s all ease;
   }
 `;
