@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import HeroSection from "./Components/HeroSection";
 import NavBar from "./Components/NavComponents/NavBar";
 import SideBar from "./Components/NavComponents/SideBar";
+import ContactSection from "./Components/ContactSection";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route exact path="/projects">
             <ProjectsSection />
+          </Route>
+          <Route exact path="/contact">
+            <ContactSection />
           </Route>
         </Switch>
       </Router>
