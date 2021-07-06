@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
-import { IoIosArrowDown, IoMdArrowDown } from "react-icons/io";
+import { IoIosArrowForward, IoMdArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
@@ -107,11 +107,11 @@ const HeroBtnWrap = styled.div`
   align-items: center;
 `;
 
-const ArrowDown = styled(IoIosArrowDown)`
+const ArrowDown = styled(IoIosArrowForward)`
   margin-left: 8px;
   font-size: 20px;
 `;
-const ArrowDownActive = styled(IoMdArrowDown)`
+const ArrowDownActive = styled(IoMdArrowForward)`
   margin-left: 8px;
   font-size: 20px;
 `;
