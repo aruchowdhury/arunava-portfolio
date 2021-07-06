@@ -77,7 +77,7 @@ const HeroContent = styled.div`
   animation: ${Animation};
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
-  background: rgba(0, 212, 198, 0.4);
+  background: rgba(0, 212, 198, 0.2);
   border-radius: 20px;
   z-index: 2;
   position: absolute;
