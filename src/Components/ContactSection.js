@@ -30,19 +30,23 @@ const ContactSection = () => {
       <StyledForm>
         <InputDiv>
           <Label name="name">Name</Label>
-          <Input type="text" name="name" required></Input>
+          <Input type="text" name="name" required="true"></Input>
         </InputDiv>
         <InputDiv>
           <Label email="email">Email</Label>
-          <Input type="email" name="email" required></Input>
+          <Input type="email" name="email" required="true"></Input>
         </InputDiv>
         <InputDiv>
           <Label subject="subject">Subject</Label>
-          <Input type="text" name="subject" required></Input>
+          <Input type="text" name="subject" required="true"></Input>
         </InputDiv>
         <InputDiv>
           <Label message="message">Message</Label>
-          <StyledTextArea type="text" name="message" required></StyledTextArea>
+          <StyledTextArea
+            type="text"
+            name="message"
+            required="true"
+          ></StyledTextArea>
         </InputDiv>
         <ButtonDiv>
           <StyledButton onClick={sendEmail}>Send Message</StyledButton>
