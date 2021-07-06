@@ -14,7 +14,7 @@ const NavBar = ({ handleClick }) => {
 
         <NavMenu>
           <NavItem>
-            <NavLinkR to="/projects">Projects</NavLinkR>
+            <NavLink to="/projects">Projects</NavLink>
           </NavItem>
           <NavItem>
             <NavLink to="/contact">Contact</NavLink>
@@ -114,19 +114,7 @@ const NavItem = styled.li`
 `;
 const NavLink = styled(Link)`
   color: #1f4894;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
-  cursor: pointer;
-  transition: all ease-in-out 0.3s;
-  &:hover {
-    opacity: 0.4;
-  }
-`;
-const NavLinkR = styled(Link)`
-  color: #1f4894;
+  font-weight: 600;
   display: flex;
   align-items: center;
   text-decoration: none;
