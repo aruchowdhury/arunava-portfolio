@@ -27,7 +27,7 @@ const ContactSection = () => {
   return (
     <ContactWrapper id="contact">
       <Heading>Contact Me</Heading>
-      <Form onSubmit={sendEmail}>
+      <StyledForm>
         <InputDiv>
           <Label name="name">Name</Label>
           <Input type="text" name="name" required></Input>
@@ -42,12 +42,12 @@ const ContactSection = () => {
         </InputDiv>
         <InputDiv>
           <Label message="message">Message</Label>
-          <Textarea type="text" name="message" required></Textarea>
+          <StyledTextArea type="text" name="message" required></StyledTextArea>
         </InputDiv>
         <ButtonDiv>
-          <Button type="submit" value="Send Message"></Button>
+          <StyledButton onClick={sendEmail}>Send Message</StyledButton>
         </ButtonDiv>
-      </Form>
+      </StyledForm>
     </ContactWrapper>
   );
 };
@@ -71,6 +71,9 @@ const Heading = styled.h1`
   margin-bottom: 50px;
   margin-top: 80px;
 `;
+const StyledForm = styled.form`
+  max-width: 100%;
+`;
 
 const ButtonDiv = styled.div`
   width: 100%;
@@ -80,7 +83,7 @@ const ButtonDiv = styled.div`
   margin-top: 30px;
 `;
 
-const Button = styled.input`
+const StyledButton = styled.button`
   width: 200px;
   height: 50px;
   background: #656097;
@@ -96,7 +99,7 @@ const Button = styled.input`
   }
 `;
 
-const Textarea = styled.textarea`
+const StyledTextArea = styled.textarea`
   width: 500px;
   height: 100px;
   background: #656097;
@@ -136,8 +139,4 @@ const Input = styled.input`
   @media screen and (max-width: 450px) {
     width: 80vw;
   }
-`;
-
-const Form = styled.form`
-  max-width: 100%;
 `;
