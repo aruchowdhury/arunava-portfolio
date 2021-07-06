@@ -1,4 +1,4 @@
-# Portfolio site of Arunava Chowdhury
+# Portfolio website of Arunava Chowdhury
 
 Web URL: https://www.findarunava.com
 
