@@ -61,7 +61,7 @@ const MenuGrid = styled.div`
 `;
 const Animation = keyframes`
   0% { top: -4rem; }
-  100% { top: 1.5rem;}
+  100% { top: 1rem;}
 `;
 
 const ItemWrapper = styled.div`
