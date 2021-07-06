@@ -25,10 +25,10 @@ const ContactSection = () => {
   };
   return (
     <Wrap>
-      <h1>
+      <Heading>
         Please fill the form out, <br />I will get back to you as soon as
         possible.
-      </h1>
+      </Heading>
       <RegistrationForm>
         <InputDivWrapper>
           <label name="name"> Full Name:</label>
@@ -194,4 +194,8 @@ const InputDivWrapper = styled.div`
       margin: 0 0;
     }
   }
+`;
+
+const Heading = styled.div`
+  font-size: 1.5rem;
 `;
