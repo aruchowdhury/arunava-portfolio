@@ -15,17 +15,17 @@ function App() {
   };
   return (
     <>
-      <Router>
+      <Router basename={"/subdirectory"}>
         <SideBar isOpen={isOpen} handleClick={handleClick} />
         <NavBar handleClick={handleClick} />
         <Switch>
           <Route exact path="/">
             <HeroSection />
           </Route>
-          <Route exact path="/projects">
+          <Route exact path="/#projects">
             <ProjectsSection />
           </Route>
-          <Route exact path="/contact">
+          <Route exact path="/#contact">
             <ContactSection />
           </Route>
         </Switch>
