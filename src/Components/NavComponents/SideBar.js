@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
+import { RiPagesLine } from "react-icons/ri";
 
 const SideBar = ({ isOpen, handleClick }) => {
   return (
@@ -19,11 +19,14 @@ const SideBar = ({ isOpen, handleClick }) => {
           <SideBarLink to="/contact" onClick={handleClick}>
             Contact
           </SideBarLink>
-          <IconLink href="">
+          <IconLink href="https://www.linkedin.com/in/arunavachowdhury/">
             <FaLinkedin size={30} />
           </IconLink>
-          <IconLink href="">
+          <IconLink href="https://github.com/aruchowdhury">
             <FaGithubSquare size={30} />
+          </IconLink>
+          <IconLink href="https://drive.google.com/file/d/14bquElbjHzNJSQslFWF7cQw_6CwNBjKS/view?usp=sharing">
+            <RiPagesLine size={30} />
           </IconLink>
         </SideBarMenu>
       </SideItemWrapper>
