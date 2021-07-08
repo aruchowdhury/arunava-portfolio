@@ -15,7 +15,7 @@ function App() {
   };
   return (
     <>
-      <Router basename={"/subdirectory"}>
+      <Router>
         <SideBar isOpen={isOpen} handleClick={handleClick} />
         <NavBar handleClick={handleClick} />
         <Switch>
