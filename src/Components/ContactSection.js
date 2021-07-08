@@ -137,7 +137,7 @@ const MessageInput = styled.textarea`
 
 const InputButton = styled.input`
   height: 2.6rem;
-  width: 25rem;
+  width: 24.8rem;
   margin: 0.5rem 0 0 9.6rem;
   background: #1f4894;
   border: 0.1rem solid #1f4894;
