@@ -26,52 +26,30 @@ const ContactSection = () => {
   return (
     <Wrap>
       <Heading>Contact Me</Heading>
-      <RegistrationForm>
+      <RegistrationForm className="contact-form" onSubmit={sendEmail}>
         <InputDivWrapper>
-          <label name="name"> Full Name:</label>
-          <Input
-            type="text"
-            name="name"
-            placeholder="full name"
-            required="true"
-          />
+          <Label>Name:</Label>
+          <Input type="text" name="name" required />
         </InputDivWrapper>
         <InputDivWrapper>
-          <label email="email"> Email:</label>
-          <Input
-            type="email"
-            name="email"
-            placeholder="email"
-            required="true"
-          />
+          <Label>Email:</Label>
+          <Input type="email" name="email" required />
         </InputDivWrapper>
         <InputDivWrapper>
-          <label subject="subject"> Subject:</label>
-          <Input
-            type="text"
-            name="subject"
-            placeholder="subject"
-            required="true"
-          />
+          <Label>Subject:</Label>
+          <Input type="text" name="subject" required />
         </InputDivWrapper>
         <InputDivWrapper>
-          <label message="message"> Message:</label>
-          <MessageInput
-            type="text"
-            placeholder="message"
-            name="message"
-            required="true"
-          />
+          <Label>Message:</Label>
+          <MessageInput type="text" name="message" required />
         </InputDivWrapper>
-
         <InputDivWrapper>
-          <Button onClick={sendEmail}> Send Message </Button>
+          <InputButton type="submit" value="Send" />
         </InputDivWrapper>
       </RegistrationForm>
     </Wrap>
   );
 };
-
 export default ContactSection;
 
 const Animation = keyframes`
@@ -123,6 +101,11 @@ const RegistrationForm = styled.form`
   }
 `;
 
+const Label = styled.label`
+  font-size: 1.2rem;
+  color: #1f4894;
+  margin-bottom: 5px;
+`;
 const Input = styled.input`
   width: 24rem;
   height: 2rem;
@@ -137,7 +120,7 @@ const Input = styled.input`
     margin: 0.5rem 0;
   }
 `;
-const MessageInput = styled.input`
+const MessageInput = styled.textarea`
   width: 24rem;
   height: 6rem;
   padding: 0.3rem;
@@ -152,7 +135,7 @@ const MessageInput = styled.input`
   }
 `;
 
-const Button = styled.button`
+const InputButton = styled.input`
   height: 2.6rem;
   width: 25rem;
   margin: 0.5rem 0 0 9.6rem;
@@ -186,10 +169,6 @@ const InputDivWrapper = styled.div`
   @media (max-width: 600px) {
     flex-direction: column;
     align-items: flex-start;
-
-    label {
-      margin: 0 0;
-    }
   }
 `;
 
