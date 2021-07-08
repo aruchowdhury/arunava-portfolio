@@ -1,3 +1,4 @@
+import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProjectsSection from "./Components/ProjectsSection";
 import React, { useState } from "react";
