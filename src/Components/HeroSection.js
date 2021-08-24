@@ -17,13 +17,11 @@ const HeroSection = () => {
           <ProfileImg />
           <Description>
             <Heading1>Hi, I am Arunava Chowdhury</Heading1>
-            <Heading2>A Full-stack Developer</Heading2>
+            <Heading2>Junior Full-stack Developer at BalloonBox Inc.</Heading2>
             <Text>
               I love responsive web applications and am experienced in creating
               modern front-end using React and JavaScript and robust backend
-              using Node.js, Express.js, and MongoDB. I am currently learning
-              more about React and UI/UX design to bridge the gap between
-              complex code and dynamic user experience.
+              using Node.js, Express.js, and MongoDB. I am currently learning GraphQL, Apollo Server, Prisma ORM, PostgreSQL.
             </Text>
           </Description>
         </AboutContainer>
