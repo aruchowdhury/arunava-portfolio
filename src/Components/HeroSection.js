@@ -144,7 +144,7 @@ const Heading1 = styled.h1`
 `;
 const Heading2 = styled.h1`
   color: #1f4894;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   line-height: 3.5rem;
   @media screen and (max-width: 768px) {
