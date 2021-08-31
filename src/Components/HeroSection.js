@@ -21,7 +21,7 @@ const HeroSection = () => {
             <Text>
               I love responsive web applications and am experienced in creating
               modern front-end using React and JavaScript and robust backend
-              using Node.js, Express.js, and MongoDB. I am currently learning GraphQL, Apollo Server, Prisma ORM, PostgreSQL.
+              using Node.js, Express.js, and MongoDB. I am currently learning Typescript, GraphQL, Apollo Server, Prisma ORM, PostgreSQL.
             </Text>
           </Description>
         </AboutContainer>
