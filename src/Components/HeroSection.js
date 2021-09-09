@@ -174,7 +174,7 @@ const ProfileImg = styled.div`
   border-radius: 20px;
   border: none;
   margin: 10px;
-  background: url("/images/img1.png") center no-repeat;
+  background: url("/images/1628777128964.jpeg") center no-repeat;
   background-size: 300px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
     0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
