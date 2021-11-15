@@ -1,6 +1,6 @@
 # Portfolio website of Arunava Chowdhury
 
-Web URL: https://www.findarunava.com
+Web URL: 
 
 Technologies used: React, Styled-components, and React-Icons.
 
