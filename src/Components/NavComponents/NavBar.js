@@ -32,7 +32,7 @@ const NavBar = ({ handleClick }) => {
           <IconLink href="https://github.com/aruchowdhury">
             <FaGithubSquare size={30} />
           </IconLink>
-          <IconLink href="https://docs.google.com/document/d/1H8dD2On8zAFBMw68Y9iSk07KENQgxrUi58GS1vlEuVg/edit#heading=h.so36goe92rz4">
+          <IconLink href="https://drive.google.com/file/d/1IZx0q2lZNqEw9RdELfwY3bn1DqgL2kGz/view?usp=sharing">
             <RiPagesLine size={30} />
           </IconLink>
         </NavMenu>
