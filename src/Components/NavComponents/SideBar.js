@@ -25,7 +25,7 @@ const SideBar = ({ isOpen, handleClick }) => {
           <IconLink href="https://github.com/aruchowdhury">
             <FaGithubSquare size={30} />
           </IconLink>
-          <IconLink href="https://drive.google.com/file/d/1IZx0q2lZNqEw9RdELfwY3bn1DqgL2kGz/view?usp=sharing">
+          <IconLink href="https://drive.google.com/file/d/1peBiL-DvIhCI8edyY_2FW0PreRIw8cj2/view?usp=sharing">
             <RiPagesLine size={30} />
           </IconLink>
         </SideBarMenu>
